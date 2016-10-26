@@ -1,0 +1,297 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EF7CA78F1DC16A1C0053440E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7CA78E1DC16A1C0053440E /* AppDelegate.m */; };
+		EF7CA7921DC16A1C0053440E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7CA7911DC16A1C0053440E /* main.m */; };
+		EF7CA7941DC16A1C0053440E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF7CA7931DC16A1C0053440E /* Assets.xcassets */; };
+		EF7CA7971DC16A1C0053440E /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF7CA7951DC16A1C0053440E /* MainMenu.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		EF7CA78A1DC16A1C0053440E /* slime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = slime.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF7CA78D1DC16A1C0053440E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EF7CA78E1DC16A1C0053440E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EF7CA7911DC16A1C0053440E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EF7CA7931DC16A1C0053440E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EF7CA7961DC16A1C0053440E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		EF7CA7981DC16A1C0053440E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EF7CA7871DC16A1C0053440E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EF7CA7811DC16A1C0053440E = {
+			isa = PBXGroup;
+			children = (
+				EF7CA78C1DC16A1C0053440E /* slime */,
+				EF7CA78B1DC16A1C0053440E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EF7CA78B1DC16A1C0053440E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EF7CA78A1DC16A1C0053440E /* slime.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EF7CA78C1DC16A1C0053440E /* slime */ = {
+			isa = PBXGroup;
+			children = (
+				EF7CA78D1DC16A1C0053440E /* AppDelegate.h */,
+				EF7CA78E1DC16A1C0053440E /* AppDelegate.m */,
+				EF7CA7931DC16A1C0053440E /* Assets.xcassets */,
+				EF7CA7951DC16A1C0053440E /* MainMenu.xib */,
+				EF7CA7981DC16A1C0053440E /* Info.plist */,
+				EF7CA7901DC16A1C0053440E /* Supporting Files */,
+			);
+			path = slime;
+			sourceTree = "<group>";
+		};
+		EF7CA7901DC16A1C0053440E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EF7CA7911DC16A1C0053440E /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EF7CA7891DC16A1C0053440E /* slime */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF7CA79B1DC16A1C0053440E /* Build configuration list for PBXNativeTarget "slime" */;
+			buildPhases = (
+				EF7CA7861DC16A1C0053440E /* Sources */,
+				EF7CA7871DC16A1C0053440E /* Frameworks */,
+				EF7CA7881DC16A1C0053440E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = slime;
+			productName = slime;
+			productReference = EF7CA78A1DC16A1C0053440E /* slime.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EF7CA7821DC16A1C0053440E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = bokny;
+				TargetAttributes = {
+					EF7CA7891DC16A1C0053440E = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = EF7CA7851DC16A1C0053440E /* Build configuration list for PBXProject "slime" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EF7CA7811DC16A1C0053440E;
+			productRefGroup = EF7CA78B1DC16A1C0053440E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EF7CA7891DC16A1C0053440E /* slime */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EF7CA7881DC16A1C0053440E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF7CA7941DC16A1C0053440E /* Assets.xcassets in Resources */,
+				EF7CA7971DC16A1C0053440E /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EF7CA7861DC16A1C0053440E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF7CA7921DC16A1C0053440E /* main.m in Sources */,
+				EF7CA78F1DC16A1C0053440E /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EF7CA7951DC16A1C0053440E /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF7CA7961DC16A1C0053440E /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EF7CA7991DC16A1C0053440E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		EF7CA79A1DC16A1C0053440E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		EF7CA79C1DC16A1C0053440E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = slime/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = bungo2dungo.slime;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EF7CA79D1DC16A1C0053440E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = slime/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = bungo2dungo.slime;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EF7CA7851DC16A1C0053440E /* Build configuration list for PBXProject "slime" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF7CA7991DC16A1C0053440E /* Debug */,
+				EF7CA79A1DC16A1C0053440E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF7CA79B1DC16A1C0053440E /* Build configuration list for PBXNativeTarget "slime" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF7CA79C1DC16A1C0053440E /* Debug */,
+				EF7CA79D1DC16A1C0053440E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EF7CA7821DC16A1C0053440E /* Project object */;
+}
