@@ -13,6 +13,9 @@
 		EFC674171DCD521F006DF09C /* SDL2_image.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFC674141DCD521F006DF09C /* SDL2_image.framework */; };
 		EFC674181DCD521F006DF09C /* SDL2_mixer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFC674151DCD521F006DF09C /* SDL2_mixer.framework */; };
 		EFC674191DCD521F006DF09C /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFC674161DCD521F006DF09C /* SDL2.framework */; };
+		EFD6A43D1DCD640B0009F83D /* slime_gfx.c in Sources */ = {isa = PBXBuildFile; fileRef = EFD6A43B1DCD640B0009F83D /* slime_gfx.c */; };
+		EFD6A4401DCD64E10009F83D /* slime_adt.c in Sources */ = {isa = PBXBuildFile; fileRef = EFD6A43E1DCD64E10009F83D /* slime_adt.c */; };
+		EFD6A4431DCD68350009F83D /* slime_input.c in Sources */ = {isa = PBXBuildFile; fileRef = EFD6A4411DCD68350009F83D /* slime_input.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,12 @@
 		EFC674141DCD521F006DF09C /* SDL2_image.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_image.framework; path = ../../../../../Library/Frameworks/SDL2_image.framework; sourceTree = "<group>"; };
 		EFC674151DCD521F006DF09C /* SDL2_mixer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_mixer.framework; path = ../../../../../Library/Frameworks/SDL2_mixer.framework; sourceTree = "<group>"; };
 		EFC674161DCD521F006DF09C /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = ../../../../../Library/Frameworks/SDL2.framework; sourceTree = "<group>"; };
+		EFD6A43B1DCD640B0009F83D /* slime_gfx.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = slime_gfx.c; sourceTree = "<group>"; };
+		EFD6A43C1DCD640B0009F83D /* slime_gfx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = slime_gfx.h; sourceTree = "<group>"; };
+		EFD6A43E1DCD64E10009F83D /* slime_adt.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = slime_adt.c; sourceTree = "<group>"; };
+		EFD6A43F1DCD64E10009F83D /* slime_adt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = slime_adt.h; sourceTree = "<group>"; };
+		EFD6A4411DCD68350009F83D /* slime_input.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = slime_input.c; sourceTree = "<group>"; };
+		EFD6A4421DCD68350009F83D /* slime_input.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = slime_input.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +75,12 @@
 				EFC6740B1DCD4839006DF09C /* main.c */,
 				EFC6740D1DCD4875006DF09C /* slime.c */,
 				EFC6740E1DCD4875006DF09C /* slime.h */,
+				EFD6A43E1DCD64E10009F83D /* slime_adt.c */,
+				EFD6A43F1DCD64E10009F83D /* slime_adt.h */,
+				EFD6A43B1DCD640B0009F83D /* slime_gfx.c */,
+				EFD6A43C1DCD640B0009F83D /* slime_gfx.h */,
+				EFD6A4411DCD68350009F83D /* slime_input.c */,
+				EFD6A4421DCD68350009F83D /* slime_input.h */,
 				EFC674101DCD501F006DF09C /* slime_views.c */,
 				EFC674111DCD501F006DF09C /* slime_views.h */,
 			);
@@ -150,9 +165,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFD6A4401DCD64E10009F83D /* slime_adt.c in Sources */,
 				EFC6740F1DCD4875006DF09C /* slime.c in Sources */,
 				EFC6740C1DCD4839006DF09C /* main.c in Sources */,
+				EFD6A43D1DCD640B0009F83D /* slime_gfx.c in Sources */,
 				EFC674121DCD501F006DF09C /* slime_views.c in Sources */,
+				EFD6A4431DCD68350009F83D /* slime_input.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
