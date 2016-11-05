@@ -12,6 +12,7 @@
 #include <SDL2/SDL.h>
 
 #include "slime_adt.h"
+#include "slime_window.h"
 #include "slime_gfx.h"
 #include "slime_input.h"
 #include "slime_views.h"

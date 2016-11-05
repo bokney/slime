@@ -14,4 +14,10 @@ typedef struct llnode_ {
     struct llnode_ *next;
 }llnode;
 
+unsigned int ll_count(llnode *head);
+void ll_append(llnode **head, void *data);
+void ll_prepend(llnode **head, void *data);
+void *ll_get(llnode **head, unsigned int number);
+void ll_purge(llnode **head);
+
 #endif /* slime_adt_h */

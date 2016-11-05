@@ -10,5 +10,19 @@
 #include <SDL2_image/SDL_image.h>
 
 #include "slime_adt.h"
+#include "slime_window.h"
+
+typedef SDL_Rect rect;
+typedef SDL_Texture tex;
+
+typedef struct sprite_ {
+    tex *texture;
+    int frameAmount;
+    llnode *frameList;
+}sprite;
+
+tex *loadTexture(char *filepath);
+sprite *spriteCreate(tex *texture);
+void spriteAddFrame(sprite *sprite, int x, int y, int w, int h);
 
 #endif /* slime_gfx_h */

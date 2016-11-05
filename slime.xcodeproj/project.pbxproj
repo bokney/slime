@@ -16,6 +16,7 @@
 		EFD6A43D1DCD640B0009F83D /* slime_gfx.c in Sources */ = {isa = PBXBuildFile; fileRef = EFD6A43B1DCD640B0009F83D /* slime_gfx.c */; };
 		EFD6A4401DCD64E10009F83D /* slime_adt.c in Sources */ = {isa = PBXBuildFile; fileRef = EFD6A43E1DCD64E10009F83D /* slime_adt.c */; };
 		EFD6A4431DCD68350009F83D /* slime_input.c in Sources */ = {isa = PBXBuildFile; fileRef = EFD6A4411DCD68350009F83D /* slime_input.c */; };
+		EFD6A4461DCE5FA70009F83D /* slime_window.c in Sources */ = {isa = PBXBuildFile; fileRef = EFD6A4441DCE5FA70009F83D /* slime_window.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,8 @@
 		EFD6A43F1DCD64E10009F83D /* slime_adt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = slime_adt.h; sourceTree = "<group>"; };
 		EFD6A4411DCD68350009F83D /* slime_input.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = slime_input.c; sourceTree = "<group>"; };
 		EFD6A4421DCD68350009F83D /* slime_input.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = slime_input.h; sourceTree = "<group>"; };
+		EFD6A4441DCE5FA70009F83D /* slime_window.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = slime_window.c; sourceTree = "<group>"; };
+		EFD6A4451DCE5FA70009F83D /* slime_window.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = slime_window.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +86,8 @@
 				EFD6A4421DCD68350009F83D /* slime_input.h */,
 				EFC674101DCD501F006DF09C /* slime_views.c */,
 				EFC674111DCD501F006DF09C /* slime_views.h */,
+				EFD6A4441DCE5FA70009F83D /* slime_window.c */,
+				EFD6A4451DCE5FA70009F83D /* slime_window.h */,
 			);
 			path = slime;
 			sourceTree = "<group>";
@@ -165,6 +170,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFD6A4461DCE5FA70009F83D /* slime_window.c in Sources */,
 				EFD6A4401DCD64E10009F83D /* slime_adt.c in Sources */,
 				EFC6740F1DCD4875006DF09C /* slime.c in Sources */,
 				EFC6740C1DCD4839006DF09C /* main.c in Sources */,
