@@ -15,6 +15,11 @@
 typedef SDL_Rect rect;
 typedef SDL_Texture tex;
 
+typedef struct frame_ {
+    rect src;
+    int midX, midY;
+}frame;
+
 typedef struct sprite_ {
     tex *texture;
     int frameAmount;

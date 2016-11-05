@@ -17,8 +17,16 @@ typedef struct viewContainer_ {
     unsigned int current;
 }viewContainer;
 
+viewContainer slimeView;
+
+void slimeViewsInit(void) {
+    slimeView.current = 0;
+    slimeView.total = 0;
+    slimeView.views = NULL;
+}
+
 void slimeAddView(void (*i)(void), void (*l)(void), void (*e)(void)) {
-    
+
 }
 
 void slimeViewsRun(void) {

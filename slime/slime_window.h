@@ -8,7 +8,10 @@
 
 #include <SDL2/SDL.h>
 
+typedef SDL_Window window;
 typedef SDL_Renderer renderer;
+
+void slimeWindowCreate();
 
 renderer *slimeGetWindowRenderer(void);
 

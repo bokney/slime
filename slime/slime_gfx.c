@@ -24,11 +24,18 @@ sprite *spriteCreate(tex *texture) {
 }
 
 void spriteAddFrame(sprite *sprite, int x, int y, int w, int h) {
-    rect *newRect = (rect *)malloc(sizeof(rect));
-    newRect->x = x;
-    newRect->y = y;
-    newRect->w = w;
-    newRect->h = h;
-    ll_append(&sprite->frameList, newRect);
+    frame *newFrame = (frame *)malloc(sizeof(frame));
+    newFrame->src.x = x;
+    newFrame->src.y = y;
+    newFrame->src.w = w;
+    newFrame->src.h = h;
+    newFrame->midX = x + (w / 2);
+    newFrame->midY = y + (h / 2);
+    ll_append(&sprite->frameList, newFrame);
     sprite->frameAmount++;
 }
+
+typedef struct drawCommand_ {
+    int x, y, xScale, yScale;
+    
+}drawCommand;
