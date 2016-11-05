@@ -7,20 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EF7CA78F1DC16A1C0053440E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7CA78E1DC16A1C0053440E /* AppDelegate.m */; };
-		EF7CA7921DC16A1C0053440E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7CA7911DC16A1C0053440E /* main.m */; };
-		EF7CA7941DC16A1C0053440E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF7CA7931DC16A1C0053440E /* Assets.xcassets */; };
-		EF7CA7971DC16A1C0053440E /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF7CA7951DC16A1C0053440E /* MainMenu.xib */; };
+		EFC6740C1DCD4839006DF09C /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = EFC6740B1DCD4839006DF09C /* main.c */; };
+		EFC6740F1DCD4875006DF09C /* slime.c in Sources */ = {isa = PBXBuildFile; fileRef = EFC6740D1DCD4875006DF09C /* slime.c */; };
+		EFC674121DCD501F006DF09C /* slime_views.c in Sources */ = {isa = PBXBuildFile; fileRef = EFC674101DCD501F006DF09C /* slime_views.c */; };
+		EFC674171DCD521F006DF09C /* SDL2_image.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFC674141DCD521F006DF09C /* SDL2_image.framework */; };
+		EFC674181DCD521F006DF09C /* SDL2_mixer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFC674151DCD521F006DF09C /* SDL2_mixer.framework */; };
+		EFC674191DCD521F006DF09C /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFC674161DCD521F006DF09C /* SDL2.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EF7CA78A1DC16A1C0053440E /* slime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = slime.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		EF7CA78D1DC16A1C0053440E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		EF7CA78E1DC16A1C0053440E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		EF7CA7911DC16A1C0053440E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		EF7CA7931DC16A1C0053440E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		EF7CA7961DC16A1C0053440E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		EF7CA7981DC16A1C0053440E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFC6740B1DCD4839006DF09C /* main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		EFC6740D1DCD4875006DF09C /* slime.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = slime.c; sourceTree = "<group>"; };
+		EFC6740E1DCD4875006DF09C /* slime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = slime.h; sourceTree = "<group>"; };
+		EFC674101DCD501F006DF09C /* slime_views.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = slime_views.c; sourceTree = "<group>"; };
+		EFC674111DCD501F006DF09C /* slime_views.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = slime_views.h; sourceTree = "<group>"; };
+		EFC674141DCD521F006DF09C /* SDL2_image.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_image.framework; path = ../../../../../Library/Frameworks/SDL2_image.framework; sourceTree = "<group>"; };
+		EFC674151DCD521F006DF09C /* SDL2_mixer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_mixer.framework; path = ../../../../../Library/Frameworks/SDL2_mixer.framework; sourceTree = "<group>"; };
+		EFC674161DCD521F006DF09C /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = ../../../../../Library/Frameworks/SDL2.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,6 +33,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFC674191DCD521F006DF09C /* SDL2.framework in Frameworks */,
+				EFC674171DCD521F006DF09C /* SDL2_image.framework in Frameworks */,
+				EFC674181DCD521F006DF09C /* SDL2_mixer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -37,6 +45,7 @@
 		EF7CA7811DC16A1C0053440E = {
 			isa = PBXGroup;
 			children = (
+				EFC674131DCD5208006DF09C /* Frameworks */,
 				EF7CA78C1DC16A1C0053440E /* slime */,
 				EF7CA78B1DC16A1C0053440E /* Products */,
 			);
@@ -53,22 +62,24 @@
 		EF7CA78C1DC16A1C0053440E /* slime */ = {
 			isa = PBXGroup;
 			children = (
-				EF7CA78D1DC16A1C0053440E /* AppDelegate.h */,
-				EF7CA78E1DC16A1C0053440E /* AppDelegate.m */,
-				EF7CA7931DC16A1C0053440E /* Assets.xcassets */,
-				EF7CA7951DC16A1C0053440E /* MainMenu.xib */,
 				EF7CA7981DC16A1C0053440E /* Info.plist */,
-				EF7CA7901DC16A1C0053440E /* Supporting Files */,
+				EFC6740B1DCD4839006DF09C /* main.c */,
+				EFC6740D1DCD4875006DF09C /* slime.c */,
+				EFC6740E1DCD4875006DF09C /* slime.h */,
+				EFC674101DCD501F006DF09C /* slime_views.c */,
+				EFC674111DCD501F006DF09C /* slime_views.h */,
 			);
 			path = slime;
 			sourceTree = "<group>";
 		};
-		EF7CA7901DC16A1C0053440E /* Supporting Files */ = {
+		EFC674131DCD5208006DF09C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				EF7CA7911DC16A1C0053440E /* main.m */,
+				EFC674161DCD521F006DF09C /* SDL2.framework */,
+				EFC674141DCD521F006DF09C /* SDL2_image.framework */,
+				EFC674151DCD521F006DF09C /* SDL2_mixer.framework */,
 			);
-			name = "Supporting Files";
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -129,8 +140,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF7CA7941DC16A1C0053440E /* Assets.xcassets in Resources */,
-				EF7CA7971DC16A1C0053440E /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,23 +150,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF7CA7921DC16A1C0053440E /* main.m in Sources */,
-				EF7CA78F1DC16A1C0053440E /* AppDelegate.m in Sources */,
+				EFC6740F1DCD4875006DF09C /* slime.c in Sources */,
+				EFC6740C1DCD4839006DF09C /* main.c in Sources */,
+				EFC674121DCD501F006DF09C /* slime_views.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		EF7CA7951DC16A1C0053440E /* MainMenu.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EF7CA7961DC16A1C0053440E /* Base */,
-			);
-			name = MainMenu.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		EF7CA7991DC16A1C0053440E /* Debug */ = {
@@ -252,6 +251,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = slime/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = bungo2dungo.slime;
@@ -264,6 +267,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = slime/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = bungo2dungo.slime;
@@ -290,6 +297,7 @@
 				EF7CA79D1DC16A1C0053440E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
