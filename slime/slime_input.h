@@ -19,9 +19,9 @@ int slimeMouseX(void);
 int slimeMouseY(void);
 
 typedef enum mouseButton_ {
-    MB_LEFT,
-    MB_MIDDLE,
-    MB_RIGHT
+    MB_LEFT     = 0,
+    MB_MIDDLE   = 1,
+    MB_RIGHT    = 2
 }mouseButton;
 
 bool slimeCheckMouseButton(mouseButton button);

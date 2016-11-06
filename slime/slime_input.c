@@ -58,3 +58,28 @@ void slimeInputPoll(void) {
         }
     }
 }
+
+int slimeMouseX(void) {
+    return slimeInput.mouseX;
+}
+
+int slimeMouseY(void) {
+    return slimeInput.mouseY;
+}
+
+bool slimeCheckMouseButton(mouseButton button) {
+    return slimeInput.mouseButtonStatus[button];
+}
+
+bool slimeCheckMouseButtonPressed(mouseButton button) {
+    if (slimeInput.mouseButtonStatus[button] &&
+        !slimeInput.mouseButtonPreviousStatus[button]) {
+        return true;
+    } return false;
+}
+bool slimeCheckMouseButtonReleased(mouseButton button) {
+    if (!slimeInput.mouseButtonStatus[button] &&
+        slimeInput.mouseButtonPreviousStatus[button]) {
+        return true;
+    } return false;
+}

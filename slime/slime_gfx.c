@@ -58,5 +58,6 @@ typedef struct drawCommand_ {
 }drawCommand;
 
 void slimeDraw(void) {
-    
+    // purge draw list
+    // first reverse it
 }

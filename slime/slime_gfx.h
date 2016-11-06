@@ -26,11 +26,13 @@ typedef struct sprite_ {
     llnode *frameList;
 }sprite;
 
-void slimeGfxInit(void);
-
 tex *loadTexture(char *filepath);
 sprite *spriteCreate(tex *texture);
 void spriteAddFrame(sprite *sprite, int x, int y, int w, int h);
+
+void slimeGfxInit(void);
+// slimeGfxInit() is called
+// during slimeCreate()
 
 void slimeDraw(void);
 // slimeDraw() is called

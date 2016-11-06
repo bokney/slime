@@ -11,8 +11,11 @@
 
 #include "slime_adt.h"
 
-void slimeViewsInit(void);
 void slimeAddView(void (*i)(void), void (*l)(void), void (*e)(void));
+
+void slimeViewsInit(void);
+// slimeViewsInit() is called
+// during slimeCreate()
 void slimeViewsRun(void);
 // slimeViewsRun() is called
 // each frame in slimeRun()
