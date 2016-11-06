@@ -8,5 +8,6 @@
 #include "slime.h"
 
 int main (int argc, char **argv) {
-    //slimeCreate(
+    slimeCreate(320, 240, 1, "buttcrack");
+    for (;;) slimeRun();
 }

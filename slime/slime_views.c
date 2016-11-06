@@ -18,6 +18,8 @@ typedef struct viewContainer_ {
 }viewContainer;
 
 viewContainer slimeView;
+// slimeView is a singleton
+// of type viewContainer
 
 void slimeViewsInit(void) {
     slimeView.current = 0;

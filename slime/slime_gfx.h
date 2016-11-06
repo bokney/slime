@@ -22,12 +22,18 @@ typedef struct frame_ {
 
 typedef struct sprite_ {
     tex *texture;
-    int frameAmount;
+    unsigned int frameAmount;
     llnode *frameList;
 }sprite;
+
+void slimeGfxInit(void);
 
 tex *loadTexture(char *filepath);
 sprite *spriteCreate(tex *texture);
 void spriteAddFrame(sprite *sprite, int x, int y, int w, int h);
+
+void slimeDraw(void);
+// slimeDraw() is called
+// each frame in slimeRun()
 
 #endif /* slime_gfx_h */

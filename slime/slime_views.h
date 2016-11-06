@@ -14,5 +14,7 @@
 void slimeViewsInit(void);
 void slimeAddView(void (*i)(void), void (*l)(void), void (*e)(void));
 void slimeViewsRun(void);
+// slimeViewsRun() is called
+// each frame in slimeRun()
 
 #endif /* slime_views_h */

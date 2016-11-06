@@ -5,6 +5,19 @@
 
 #include "slime_gfx.h"
 
+void slimeGfxInit(void) {
+    // init SDL Video
+    if (SDL_Init(SDL_INIT_VIDEO)) { // error
+        printf("Error initialising SDL: %s\n", SDL_GetError());
+        exit(1);
+    } else printf("SDL successfully initialised.\n");
+    // init SDL_Image
+    if ((IMG_Init(IMG_INIT_PNG) & IMG_INIT_PNG) != IMG_INIT_PNG){
+        printf("Error during IMG_Init (SDL_Image): %s\n", SDL_GetError());
+        exit(1);
+    } else printf("SDL_Image successfully initialised :)\n");
+}
+
 tex *loadTexture(char *filepath) {
     tex *texture = IMG_LoadTexture(slimeGetWindowRenderer(), filepath);
     if (texture == NULL) {
@@ -36,6 +49,14 @@ void spriteAddFrame(sprite *sprite, int x, int y, int w, int h) {
 }
 
 typedef struct drawCommand_ {
-    int x, y, xScale, yScale;
-    
+    int x, y;
+    int xScale, yScale;
+    double rotation;
+    sprite *sprite;
+    unsigned int frame;
+    int alpha;
 }drawCommand;
+
+void slimeDraw(void) {
+    
+}
