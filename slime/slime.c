@@ -24,7 +24,6 @@ void slimeRun(void) {
 
     // Get time since last frame
     frameStart = SDL_GetTicks();
-    
     // Window Events
     // Poll Input
     slimeInputPoll();

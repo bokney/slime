@@ -17,6 +17,8 @@
 		EFD6A4401DCD64E10009F83D /* slime_adt.c in Sources */ = {isa = PBXBuildFile; fileRef = EFD6A43E1DCD64E10009F83D /* slime_adt.c */; };
 		EFD6A4431DCD68350009F83D /* slime_input.c in Sources */ = {isa = PBXBuildFile; fileRef = EFD6A4411DCD68350009F83D /* slime_input.c */; };
 		EFD6A4461DCE5FA70009F83D /* slime_window.c in Sources */ = {isa = PBXBuildFile; fileRef = EFD6A4441DCE5FA70009F83D /* slime_window.c */; };
+		EFD6A4491DD0CB5D0009F83D /* test_view.c in Sources */ = {isa = PBXBuildFile; fileRef = EFD6A4471DD0CB5D0009F83D /* test_view.c */; };
+		EFD6A44B1DD0CC680009F83D /* a_pic.png in Resources */ = {isa = PBXBuildFile; fileRef = EFD6A44A1DD0CC680009F83D /* a_pic.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,9 @@
 		EFD6A4421DCD68350009F83D /* slime_input.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = slime_input.h; sourceTree = "<group>"; };
 		EFD6A4441DCE5FA70009F83D /* slime_window.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = slime_window.c; sourceTree = "<group>"; };
 		EFD6A4451DCE5FA70009F83D /* slime_window.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = slime_window.h; sourceTree = "<group>"; };
+		EFD6A4471DD0CB5D0009F83D /* test_view.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = test_view.c; sourceTree = "<group>"; };
+		EFD6A4481DD0CB5D0009F83D /* test_view.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = test_view.h; sourceTree = "<group>"; };
+		EFD6A44A1DD0CC680009F83D /* a_pic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = a_pic.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +93,9 @@
 				EFC674111DCD501F006DF09C /* slime_views.h */,
 				EFD6A4441DCE5FA70009F83D /* slime_window.c */,
 				EFD6A4451DCE5FA70009F83D /* slime_window.h */,
+				EFD6A4471DD0CB5D0009F83D /* test_view.c */,
+				EFD6A4481DD0CB5D0009F83D /* test_view.h */,
+				EFD6A44A1DD0CC680009F83D /* a_pic.png */,
 			);
 			path = slime;
 			sourceTree = "<group>";
@@ -160,6 +168,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFD6A44B1DD0CC680009F83D /* a_pic.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,6 +185,7 @@
 				EFC6740C1DCD4839006DF09C /* main.c in Sources */,
 				EFD6A43D1DCD640B0009F83D /* slime_gfx.c in Sources */,
 				EFC674121DCD501F006DF09C /* slime_views.c in Sources */,
+				EFD6A4491DD0CB5D0009F83D /* test_view.c in Sources */,
 				EFD6A4431DCD68350009F83D /* slime_input.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

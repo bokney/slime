@@ -5,19 +5,6 @@
 
 #include "slime_gfx.h"
 
-void slimeGfxInit(void) {
-    // init SDL Video
-    if (SDL_Init(SDL_INIT_VIDEO)) { // error
-        printf("Error initialising SDL: %s\n", SDL_GetError());
-        exit(1);
-    } else printf("SDL successfully initialised.\n");
-    // init SDL_Image
-    if ((IMG_Init(IMG_INIT_PNG) & IMG_INIT_PNG) != IMG_INIT_PNG){
-        printf("Error during IMG_Init (SDL_Image): %s\n", SDL_GetError());
-        exit(1);
-    } else printf("SDL_Image successfully initialised :)\n");
-}
-
 tex *loadTexture(char *filepath) {
     tex *texture = IMG_LoadTexture(slimeGetWindowRenderer(), filepath);
     if (texture == NULL) {
@@ -42,8 +29,8 @@ void spriteAddFrame(sprite *sprite, int x, int y, int w, int h) {
     newFrame->src.y = y;
     newFrame->src.w = w;
     newFrame->src.h = h;
-    newFrame->midX = x + (w / 2);
-    newFrame->midY = y + (h / 2);
+    newFrame->offsetX = w / 2;
+    newFrame->offsetY = h / 2;
     ll_append(&sprite->frameList, newFrame);
     sprite->frameAmount++;
 }
@@ -54,10 +41,68 @@ typedef struct drawCommand_ {
     double rotation;
     sprite *sprite;
     unsigned int frame;
-    int alpha;
+    unsigned int alpha;
 }drawCommand;
 
+llnode *drawList = NULL;
+
+drawCommand *createDrawCommand(void) {
+    drawCommand *newCommand = (drawCommand *)malloc(sizeof(drawCommand));
+    if (newCommand == NULL) {
+        printf("Error creating new drawCommand!\n");
+        exit(1); }
+    return newCommand;
+}
+
+void slimeRenderEx(sprite *sprite, int frameNo, int x, int y,
+                   double xscale, double yscale, double angle, int alpha) {
+    drawCommand *newCommand = createDrawCommand();
+    newCommand->x = x;
+    newCommand->y = y;
+    newCommand->xScale = xscale;
+    newCommand->yScale = yscale;
+    newCommand->rotation = angle;
+    newCommand->alpha = alpha;
+    newCommand->sprite = sprite;
+    newCommand->frame = frameNo;
+    ll_prepend(&drawList, newCommand);
+    printf("drawCommand added!\n");
+}
+
+void slimeRender(sprite *sprite, int frameNo, int x, int y) {
+    slimeRenderEx(sprite, frameNo, x, y, 1, 1, 0, 255);
+}
+
 void slimeDraw(void) {
-    // purge draw list
+    // purge drawPool
     // first reverse it
+    ll_reverse(&drawList);
+    // then draw & pop
+    unsigned int amount = ll_count(drawList);
+    for (int i = 0; i != amount; i++) {
+        drawCommand *currentCommand = ll_pop(&drawList);
+        frame *currentFrame = ll_get(&currentCommand->sprite->frameList, currentCommand->frame);
+        rect *src = &currentFrame->src;
+        rect dst = {currentCommand->x - currentFrame->offsetX, currentCommand->y - currentFrame->offsetY, src->w, src->h};
+        SDL_SetTextureAlphaMod(currentCommand->sprite->texture, currentCommand->alpha);
+        SDL_RenderCopy(slimeGetWindowRenderer(), currentCommand->sprite->texture, src, &dst);
+        free(currentCommand);
+    }
+    renderer *ren = slimeGetWindowRenderer();
+    SDL_RenderPresent(ren);
+    SDL_SetRenderDrawColor(ren, 0, 0, 0, 255);
+    SDL_RenderClear(ren);
+}
+
+void slimeGfxInit(void) {
+    // init SDL Video
+    if (SDL_Init(SDL_INIT_VIDEO)) { // error
+        printf("Error initialising SDL: %s\n", SDL_GetError());
+        exit(1);
+    } else printf("SDL successfully initialised.\n");
+    // init SDL_Image
+    if ((IMG_Init(IMG_INIT_PNG) & IMG_INIT_PNG) != IMG_INIT_PNG){
+        printf("Error during IMG_Init (SDL_Image): %s\n", SDL_GetError());
+        exit(1);
+    } else printf("SDL_Image successfully initialised :)\n");
 }

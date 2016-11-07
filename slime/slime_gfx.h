@@ -17,7 +17,7 @@ typedef SDL_Texture tex;
 
 typedef struct frame_ {
     rect src;
-    int midX, midY;
+    int offsetX, offsetY;
 }frame;
 
 typedef struct sprite_ {
@@ -29,6 +29,10 @@ typedef struct sprite_ {
 tex *loadTexture(char *filepath);
 sprite *spriteCreate(tex *texture);
 void spriteAddFrame(sprite *sprite, int x, int y, int w, int h);
+
+void slimeRender(sprite *sprite, int frameNo, int x, int y);
+void slimeRenderEx(sprite *sprite, int frameNo, int x, int y,
+                   double xscale, double yscale, double angle, int alpha);
 
 void slimeGfxInit(void);
 // slimeGfxInit() is called

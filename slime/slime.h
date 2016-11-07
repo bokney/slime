@@ -20,8 +20,6 @@
 void slimeCreate(unsigned int width, unsigned int height,
                  unsigned int scale, char *title);
 
-void slimeAddView(void (*i)(void), void (*l)(void), void (*e)(void));
-
 void slimeRun(void);
 
 #endif /* slime_h */

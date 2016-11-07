@@ -11,7 +11,7 @@
 
 #include "slime_adt.h"
 
-void slimeAddView(void (*i)(void), void (*l)(void), void (*e)(void));
+void slimeAddView(void (*i)(void), int (*l)(void), void (*e)(void));
 
 void slimeViewsInit(void);
 // slimeViewsInit() is called
