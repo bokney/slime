@@ -35,6 +35,20 @@ void spriteAddFrame(sprite *sprite, int x, int y, int w, int h) {
     sprite->frameAmount++;
 }
 
+void spriteDestroy(sprite *sprite) {
+    if (sprite != NULL) {
+        unsigned int amount = sprite->frameAmount;
+        for (int i = 0; i != amount; i++) {
+            frame *tmpFrame = ll_pop(&sprite->frameList);
+            free(tmpFrame);
+            tmpFrame = NULL;
+        }
+        free(sprite);
+    } else {
+        printf("Error! Tried to deallocate a NULL sprite\n");
+        exit(1); }
+}
+
 typedef struct drawCommand_ {
     int x, y;
     int xScale, yScale;
@@ -66,7 +80,6 @@ void slimeRenderEx(sprite *sprite, int frameNo, int x, int y,
     newCommand->sprite = sprite;
     newCommand->frame = frameNo;
     ll_prepend(&drawList, newCommand);
-    printf("drawCommand added!\n");
 }
 
 void slimeRender(sprite *sprite, int frameNo, int x, int y) {

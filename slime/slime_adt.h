@@ -20,7 +20,6 @@ void ll_prepend(llnode **head, void *data);
 void ll_reverse(llnode **head);
 void *ll_pop(llnode **head);
 void *ll_get(llnode **head, unsigned int number);
-void ll_purge(llnode **head);
 
 typedef struct llpool_ {
     llnode *active;

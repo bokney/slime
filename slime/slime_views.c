@@ -49,10 +49,15 @@ void slimeViewsRun(void) {
             }
             int destination = currentView->loop();
             if (destination > 0) {
-                currentView->exit();
-                slimeView.current = destination;
-                currentView = ll_get(&slimeView.views, slimeView.current - 1);
-                currentView->init();
+                if (destination <= slimeView.total) {
+                    currentView->exit();
+                    slimeView.current = destination - 1;
+                    printf("moving tp %i\n", slimeView.current);
+                    currentView = ll_get(&slimeView.views, slimeView.current);
+                    currentView->init();
+                } else {
+                    printf("Error! Tried to move to view out of bounds!\n");
+                    exit(1); }
             }
         } else {
             printf("Error! Tried to move to view out of bounds!\n");

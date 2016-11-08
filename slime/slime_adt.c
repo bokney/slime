@@ -86,13 +86,3 @@ void *ll_get(llnode **head, unsigned int number) {
     }
     return tmpNode->data;
 }
-
-void ll_purge(llnode **head) {
-    llnode *curr = *head;
-    llnode *next;
-    while (curr != NULL) {
-        next = curr->next;
-        free(curr);
-        curr = next;
-    }
-}

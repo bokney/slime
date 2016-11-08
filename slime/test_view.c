@@ -26,5 +26,8 @@ int  test_view_loop(void) {
 }
 
 void test_view_exit(void) {
-    
+    SDL_free(pic);
+    pic = NULL;
+    //spriteDestroy(itsprite);
+    //itsprite = NULL;
 }

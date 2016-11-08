@@ -29,6 +29,7 @@ typedef struct sprite_ {
 tex *loadTexture(char *filepath);
 sprite *spriteCreate(tex *texture);
 void spriteAddFrame(sprite *sprite, int x, int y, int w, int h);
+void spriteDestroy(sprite *sprite);
 
 void slimeRender(sprite *sprite, int frameNo, int x, int y);
 void slimeRenderEx(sprite *sprite, int frameNo, int x, int y,
