@@ -15,6 +15,8 @@ typedef struct viewContainer_ {
     llnode *views;
     unsigned int total;
     unsigned int current;
+    unsigned int next;
+    bool moving;
     bool initialised;
 }viewContainer;
 
@@ -23,9 +25,11 @@ viewContainer slimeView;
 // of type viewContainer
 
 void slimeViewsInit(void) {
-    slimeView.current = 0;
-    slimeView.total = 0;
     slimeView.views = NULL;
+    slimeView.total = 0;
+    slimeView.current = 0;
+    slimeView.next = 0;
+    slimeView.moving = false;
     slimeView.initialised = false;
 }
 
@@ -40,6 +44,41 @@ void slimeAddView(void (*i)(void), int (*l)(void), void (*e)(void)) {
 }
 
 void slimeViewsRun(void) {
+    
+    if (slimeView.views != NULL) {
+
+        if (slimeView.current < slimeView.total) {
+            viewStruct *currentView = ll_get(&slimeView.views, slimeView.current);
+            if (!slimeView.initialised) {
+                currentView->init();
+                slimeView.initialised = true;
+            } else if (slimeView.moving) {
+                currentView->exit();
+                slimeView.current = slimeView.next;
+                currentView = ll_get(&slimeView.views, slimeView.current);
+                currentView->init();
+                slimeView.moving = false;
+            }
+            int destination = currentView->loop();
+            if (destination > 0) {
+                destination--;
+                if (destination < slimeView.total) {
+                    slimeView.moving = true;
+                    slimeView.next = destination;
+                } else {
+                    printf("Error! Tried to move to nonexistant view!\n");
+                    exit(1); }
+            }
+        } else {
+            printf("Error! Current view (%i) out of bounds!\n", slimeView.current);
+            exit(1); }
+        
+    } else {
+        printf("Error! No views to run!\n");
+        exit(1); }
+    
+    /*
+    
     if (slimeView.views != NULL) {
         if (slimeView.current <= slimeView.total) {
             viewStruct *currentView = ll_get(&slimeView.views, slimeView.current);
@@ -65,4 +104,5 @@ void slimeViewsRun(void) {
     } else {
         printf("Error! No views to run!\n");
         exit(1); }
+     */
 }

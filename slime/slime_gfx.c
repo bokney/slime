@@ -41,7 +41,6 @@ void spriteDestroy(sprite *sprite) {
         for (int i = 0; i != amount; i++) {
             frame *tmpFrame = ll_pop(&sprite->frameList);
             free(tmpFrame);
-            tmpFrame = NULL;
         }
         free(sprite);
     } else {
