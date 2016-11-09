@@ -14,8 +14,18 @@ tex *loadTexture(char *filepath) {
     return texture;
 }
 
+void freeTexture(tex *texture) {
+    if (texture != NULL) SDL_DestroyTexture(texture);
+    else printf("Error! Cannot free a NULL texture!\n");
+}
+
+llnode *spareFrames = NULL;
+llnode *spareSprites = NULL;
+
 sprite *spriteCreate(tex *texture) {
-    sprite *newSprite = (sprite *)malloc(sizeof(sprite));
+    sprite *newSprite;
+    if (spareSprites != NULL) newSprite = ll_pop(&spareSprites);
+    else newSprite = (sprite *)malloc(sizeof(sprite));
     newSprite->frameAmount = 0;
     newSprite->texture = texture;
     newSprite->frameList = NULL;
@@ -24,7 +34,9 @@ sprite *spriteCreate(tex *texture) {
 }
 
 void spriteAddFrame(sprite *sprite, int x, int y, int w, int h) {
-    frame *newFrame = (frame *)malloc(sizeof(frame));
+    frame *newFrame;
+    if (spareFrames != NULL) newFrame = ll_pop(&spareFrames);
+    else newFrame = (frame *)malloc(sizeof(frame));
     newFrame->src.x = x;
     newFrame->src.y = y;
     newFrame->src.w = w;
@@ -40,9 +52,9 @@ void spriteDestroy(sprite *sprite) {
         unsigned int amount = sprite->frameAmount;
         for (int i = 0; i != amount; i++) {
             frame *tmpFrame = ll_pop(&sprite->frameList);
-            free(tmpFrame);
+            ll_prepend(&spareFrames, tmpFrame);
         }
-        free(sprite);
+        ll_prepend(&spareSprites, sprite);
     } else {
         printf("Error! Tried to deallocate a NULL sprite\n");
         exit(1); }
@@ -58,9 +70,12 @@ typedef struct drawCommand_ {
 }drawCommand;
 
 llnode *drawList = NULL;
+llnode *spareCommands = NULL;
 
 drawCommand *createDrawCommand(void) {
-    drawCommand *newCommand = (drawCommand *)malloc(sizeof(drawCommand));
+    drawCommand *newCommand;
+    if (spareCommands != NULL) newCommand = ll_pop(&spareCommands);
+    else newCommand = (drawCommand *)malloc(sizeof(drawCommand));
     if (newCommand == NULL) {
         printf("Error creating new drawCommand!\n");
         exit(1); }
@@ -98,7 +113,7 @@ void slimeDraw(void) {
         rect dst = {currentCommand->x - currentFrame->offsetX, currentCommand->y - currentFrame->offsetY, src->w, src->h};
         SDL_SetTextureAlphaMod(currentCommand->sprite->texture, currentCommand->alpha);
         SDL_RenderCopy(slimeGetWindowRenderer(), currentCommand->sprite->texture, src, &dst);
-        free(currentCommand);
+        ll_prepend(&spareCommands, currentCommand);
     }
     renderer *ren = slimeGetWindowRenderer();
     SDL_RenderPresent(ren);
@@ -117,4 +132,15 @@ void slimeGfxInit(void) {
         printf("Error during IMG_Init (SDL_Image): %s\n", SDL_GetError());
         exit(1);
     } else printf("SDL_Image successfully initialised :)\n");
+}
+
+void slimeGfxExit(void) {
+    // free all draw commands
+    unsigned int amount = ll_count(spareCommands);
+    for (int i = 0; i != amount; i++) {
+        drawCommand *tmpCommand = ll_pop(&spareCommands);
+        free(tmpCommand);
+    }
+    // shut down SDL_IMG
+    IMG_Quit();
 }

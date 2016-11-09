@@ -5,8 +5,15 @@
 
 #include "slime_adt.h"
 
+llnode *spare = NULL;
+
 llnode *createNode(void) {
-    llnode *newNode = (llnode *)malloc(sizeof(llnode));
+    llnode *newNode;
+    if (spare != NULL) {
+        //printf("There are %i spare nodes\n", ll_count(spare));
+        newNode = spare;
+        spare = spare->next;
+    } else newNode = (llnode *)malloc(sizeof(llnode));
     newNode->data = NULL;
     newNode->next = NULL;
     return newNode;
@@ -63,7 +70,9 @@ void *ll_pop(llnode **head) {
         llnode *tmpNode = *head;
         void *data = tmpNode->data;
         *head = tmpNode->next;
-        free(tmpNode);
+        //free(tmpNode);
+        tmpNode->next = spare;
+        spare = tmpNode;
         return data;
     } else {
         printf("Careful now, trying to pop when there ain't no nodes\n");

@@ -27,6 +27,8 @@ typedef struct sprite_ {
 }sprite;
 
 tex *loadTexture(char *filepath);
+void freeTexture(tex *texture);
+
 sprite *spriteCreate(tex *texture);
 void spriteAddFrame(sprite *sprite, int x, int y, int w, int h);
 void spriteDestroy(sprite *sprite);
@@ -38,6 +40,10 @@ void slimeRenderEx(sprite *sprite, int frameNo, int x, int y,
 void slimeGfxInit(void);
 // slimeGfxInit() is called
 // during slimeCreate()
+
+void slimeGfxExit(void);
+// slimeGfxExit() is called
+// during slimeExit()
 
 void slimeDraw(void);
 // slimeDraw() is called

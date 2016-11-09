@@ -19,9 +19,9 @@ int  test_view_loop(void) {
     slimeRender(itsprite, 0, 0, 0);
     static int sx = 40, sy = -40, ss = 0;
     slimeRender(itsprite, 1, sx, sy);
-    sx++; sy++; ss++;
-    if (sx == 500) sx = -50;
-    if (sy == 400) sy = -50;
+    sx++; sy += 2; ss++;
+    if (sx == 360) sx = -50;
+    if (sy == 280) sy = -50;
     if (ss == 100) {
         ss = 0;
         return 1;
@@ -30,6 +30,6 @@ int  test_view_loop(void) {
 }
 
 void test_view_exit(void) {
-    SDL_free(pic);
+    freeTexture(pic);
     spriteDestroy(itsprite);
 }

@@ -5,12 +5,19 @@
 
 #include "slime.h"
 
-const unsigned int FPS = 60; // frames per second
+const unsigned int FPS = 30; // frames per second
 const unsigned int DELAY_TIME = 1000.0f / FPS;
 Uint32 frameStart, frameTime;
 
+void slimeExit(void) {
+    slimeGfxExit();
+    SDL_Quit();
+}
+
 void slimeCreate(unsigned int width, unsigned int height,
                  unsigned int scale, char *title) {
+    // set exit function
+    atexit(slimeExit);
     // init gfx
     slimeGfxInit();
     // set up window
@@ -33,6 +40,7 @@ void slimeRun(void) {
     slimeDraw();
     // Wait
     frameTime = SDL_GetTicks() - frameStart;
-    if (frameTime < DELAY_TIME) SDL_Delay((int)(DELAY_TIME - frameTime));
     
+    if (frameTime < DELAY_TIME) SDL_Delay((int)(DELAY_TIME - frameTime));
+    else printf("Frame overran!\n");
 }
