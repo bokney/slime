@@ -12,6 +12,7 @@ typedef SDL_Window window;
 typedef SDL_Renderer renderer;
 
 void slimeWindowCreate(int width, int height, int scale);
+
 void slimeWindowSetTitle(char *title);
 
 renderer *slimeGetWindowRenderer(void);

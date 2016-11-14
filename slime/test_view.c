@@ -16,7 +16,7 @@ void test_view_init(void) {
 }
 
 int  test_view_loop(void) {
-    slimeRender(itsprite, 0, 0, 0);
+    slimeRender(itsprite, 0, 320, 240);
     static int sx = 40, sy = -40, ss = 0;
     slimeRender(itsprite, 1, sx, sy);
     sx++; sy += 2; ss++;

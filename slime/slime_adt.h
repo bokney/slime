@@ -21,4 +21,12 @@ void ll_reverse(llnode **head);
 void *ll_pop(llnode **head);
 void *ll_get(llnode **head, unsigned int number);
 
+typedef struct llpool_ {
+    llnode *active;
+    llnode *inactive;
+    unsigned int amountActive;
+    unsigned int amountInactive;
+    void *(*get)(void);
+}llpool;
+
 #endif /* slime_adt_h */

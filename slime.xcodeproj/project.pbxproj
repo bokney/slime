@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF4028931DD77D260090D405 /* slime_component.c in Sources */ = {isa = PBXBuildFile; fileRef = EF4028911DD77D260090D405 /* slime_component.c */; };
 		EFC6740C1DCD4839006DF09C /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = EFC6740B1DCD4839006DF09C /* main.c */; };
 		EFC6740F1DCD4875006DF09C /* slime.c in Sources */ = {isa = PBXBuildFile; fileRef = EFC6740D1DCD4875006DF09C /* slime.c */; };
 		EFC674121DCD501F006DF09C /* slime_views.c in Sources */ = {isa = PBXBuildFile; fileRef = EFC674101DCD501F006DF09C /* slime_views.c */; };
@@ -22,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EF4028911DD77D260090D405 /* slime_component.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = slime_component.c; sourceTree = "<group>"; };
+		EF4028921DD77D260090D405 /* slime_component.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = slime_component.h; sourceTree = "<group>"; };
 		EF7CA78A1DC16A1C0053440E /* slime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = slime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF7CA7981DC16A1C0053440E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EFC6740B1DCD4839006DF09C /* main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
@@ -96,6 +99,8 @@
 				EFD6A4471DD0CB5D0009F83D /* test_view.c */,
 				EFD6A4481DD0CB5D0009F83D /* test_view.h */,
 				EFD6A44A1DD0CC680009F83D /* a_pic.png */,
+				EF4028911DD77D260090D405 /* slime_component.c */,
+				EF4028921DD77D260090D405 /* slime_component.h */,
 			);
 			path = slime;
 			sourceTree = "<group>";
@@ -185,6 +190,7 @@
 				EFC6740C1DCD4839006DF09C /* main.c in Sources */,
 				EFD6A43D1DCD640B0009F83D /* slime_gfx.c in Sources */,
 				EFC674121DCD501F006DF09C /* slime_views.c in Sources */,
+				EF4028931DD77D260090D405 /* slime_component.c in Sources */,
 				EFD6A4491DD0CB5D0009F83D /* test_view.c in Sources */,
 				EFD6A4431DCD68350009F83D /* slime_input.c in Sources */,
 			);

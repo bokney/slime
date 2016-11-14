@@ -95,3 +95,7 @@ void *ll_get(llnode **head, unsigned int number) {
     }
     return tmpNode->data;
 }
+
+//  //  //  //
+
+llpool *llpool_create(void *(*get)(void));
